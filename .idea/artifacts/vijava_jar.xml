@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact name="vijava:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/vijava_jar</output-path>
+    <root id="root">
+      <element id="archive" name="vijava.jar">
+        <element id="module-output" name="107_vijava_src" />
+        <element id="file-copy" path="$PROJECT_DIR$/License.txt" />
+        <element id="file-copy" path="$PROJECT_DIR$/README.txt" />
+        <element id="file-copy" path="$PROJECT_DIR$/rel-note.txt" />
+      </element>
+      <element id="library" level="project" name="lib" />
+    </root>
+  </artifact>
+</component>
