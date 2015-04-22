@@ -50,6 +50,8 @@ import com.vmware.vim25.VimFault;
 
 public class ManagedEntity extends ExtensibleManagedObject 
 {
+  private String myName;
+
 	public ManagedEntity(ServerConnection sc, ManagedObjectReference mor) 
 	{
 		super(sc, mor);
@@ -96,7 +98,10 @@ public class ManagedEntity extends ExtensibleManagedObject
 	
 	public String getName()
 	{
-		return (String) getCurrentProperty("name");
+	  if (myName == null) {
+		myName = (String)getCurrentProperty("name");
+	  }
+	  return myName;
 	}
 	
 	public ManagedEntityStatus getOverallStatus()
@@ -149,7 +154,7 @@ public class ManagedEntity extends ExtensibleManagedObject
 		return new Task(getServerConnection(), taskMor);
 	}
 
-
-
-
+  public void setName(final String name) {
+	myName = name;
+  }
 }

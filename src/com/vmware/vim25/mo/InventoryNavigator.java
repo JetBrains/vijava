@@ -113,6 +113,11 @@ public class InventoryNavigator
 		{
 			ManagedObjectReference mor = ocs[i].getObj();
 			mes[i] = MorUtil.createExactManagedEntity(rootEntity.getServerConnection(), mor);
+		  for (DynamicProperty property : ocs[i].getPropSet()) {
+			if ("name".equals(property.getName())){
+			  mes[i].setName(String.valueOf(property.getVal()));
+			}
+		  }
 		}
 		return mes;
 	}

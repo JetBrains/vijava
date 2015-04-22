@@ -51,11 +51,6 @@ public class Network extends ManagedEntity
 		return getHosts("host");
 	}
 
-	public String getName()
-	{
-		return (String) getCurrentProperty("name");
-	}
-	
 	public NetworkSummary getSummary()
 	{
 		return (NetworkSummary) getCurrentProperty("summary");
